@@ -22,16 +22,22 @@
       color: white;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .columns {
+      display: flex;
       gap: 1rem;
       width: 100%;
       max-width: 400px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex: 1;
     }
 
     button {
@@ -93,25 +99,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
-  <div class="grid">
-    <button class="workout" onclick="markHabit('Workout')">
-      <span class="material-symbols-outlined">fitness_center</span> workout
-    </button>
-    <button class="morning" onclick="completeMorningRoutine()">
-      <span class="material-symbols-outlined">light_mode</span> complete morning routine
-    </button>
-    <button class="take-meds" onclick="markHabit('Take Meds')">
-      <span class="material-symbols-outlined">medication</span> take meds
-    </button>
-    <button class="night" onclick="completeNightRoutine()">
-      <span class="material-symbols-outlined">bedtime</span> complete night routine
-    </button>
-    <button class="stretch" onclick="markHabit('Stretch')">
-      <span class="material-symbols-outlined">self_improvement</span> stretch
-    </button>
-    <button class="oil-cleanse" onclick="markHabit('Oil Cleanse')">
-      <span class="material-symbols-outlined">spa</span> oil cleanse
-    </button>
+  <div class="columns">
+    <div class="column">
+      <button class="workout" onclick="markHabit('Workout')">
+        <span class="material-symbols-outlined">fitness_center</span> workout
+      </button>
+      <button class="take-meds" onclick="markHabit('Take Meds')">
+        <span class="material-symbols-outlined">medication</span> take meds
+      </button>
+      <button class="stretch" onclick="markHabit('Stretch')">
+        <span class="material-symbols-outlined">self_improvement</span> stretch
+      </button>
+      <button class="oil-cleanse" onclick="markHabit('Oil Cleanse')">
+        <span class="material-symbols-outlined">spa</span> oil cleanse
+      </button>
+    </div>
+    <div class="column">
+      <button class="morning" onclick="completeMorningRoutine()">
+        <span class="material-symbols-outlined">light_mode</span> complete morning routine
+      </button>
+      <button class="night" onclick="completeNightRoutine()">
+        <span class="material-symbols-outlined">bedtime</span> complete night routine
+      </button>
+    </div>
   </div>
 
   <script>
