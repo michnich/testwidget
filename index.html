@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Notion Habit Widget</title>
+  </head>
+  <body>
+    <button onclick="markHabit('Exercise')">Exercise</button>
+    <button onclick="markHabit('Make Bed')">Make Bed</button>
+
+    <script>
+      async function markHabit(habitName) {
+        const today = new Date().toLocaleString('en-US', { weekday: 'long' });
+        const response = await fetch('/api/markHabit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ habitName, day: today })
+        });
+        const result = await response.json();
+        alert(result.message);
+      }
+    </script>
+  </body>
+</html>
