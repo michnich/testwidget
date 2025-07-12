@@ -127,7 +127,7 @@
   <script>
     async function markHabit(habitName) {
       const today = new Date().toLocaleString('en-US', { weekday: 'long' });
-      const response = await fetch('https://your-backend-url/api/markHabit', {
+      const response = await fetch('https://test-widget-api.onrender.com/api/markHabit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ habitName, day: today })
@@ -138,7 +138,7 @@
 
     async function completeMorningRoutine() {
       const today = new Date().toLocaleString('en-US', { weekday: 'long' });
-      const response = await fetch('https://your-backend-url/api/completeMorningRoutine', {
+      const response = await fetch('https://test-widget-api.onrender.com/api/completeMorningRoutine', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ day: today })
@@ -149,7 +149,7 @@
 
     async function completeNightRoutine() {
       const today = new Date().toLocaleString('en-US', { weekday: 'long' });
-      const response = await fetch('https://your-backend-url/api/completeNightRoutine', {
+      const response = await fetch('https://test-widget-api.onrender.com/api/completeNightRoutine', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ day: today })
