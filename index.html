@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Notion Habit Widget</title>
-  </head>
+  <title>Habit Tracker</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
   <body>
     <button onclick="markHabit('Exercise')">Exercise</button>
     <button onclick="markHabit('Make Bed')">Make Bed</button>
